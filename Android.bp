@@ -1,0 +1,22 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "CarrierWfcActivation",
+    srcs: ["src/**/*.kt"],
+    sdk_version: "system_current",
+    certificate: "platform",
+    privileged: true,
+    optimize: {
+        enabled: false,
+    },
+    required: ["privapp-permissions-org.lineageos.carrierwfcactivation.xml"],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-org.lineageos.carrierwfcactivation.xml",
+    sub_dir: "permissions",
+    src: "privapp-permissions-org.lineageos.carrierwfcactivation.xml",
+}
